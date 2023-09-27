@@ -1,0 +1,220 @@
+/* ============ FOOTER STYLE ============ */
+/* fixedcontact-btn */
+.fixedcontact-btn {
+    display: inline-flex;
+    position: fixed;
+    bottom: 80px;
+    right: 0;
+    z-index: 10;
+}
+.fixedcontact-btn .btn {
+    border-radius: 0;
+    border: solid 1px #fff;
+    box-shadow: 0 10px 50px rgba(0,0,0,0.15);
+}
+
+/* scroll to top */
+.back-top-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 350px;
+    right: 20px;
+    z-index: 10;
+    background: var(--primaryColor);
+    color: #fff;
+    cursor: pointer;
+    transition: all .4s
+}
+.back-top-btn:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: translateY(3px) rotate(-45deg)
+}
+.back-top-btn:hover {
+    background: var(--secondaryColor);
+}
+@media(max-width: 767px) {
+    .back-top-btn {
+        bottom:5px;
+        right: 5px
+    }
+}
+.back-top-btn-fixed {
+    visibility: visible;
+    opacity: 1;
+    bottom: 20px
+}
+@media(max-width: 767px) {
+    .back-top-btn-fixed {
+        bottom:5px
+    }
+}
+
+/* fixedfooternavbar */
+.fixedfooternavbar {
+    display: block;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    z-index: 10;
+}
+.fixedfooternavbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+.fixedfooternavbar ul li {
+    display: inline-flex;
+    margin: 10px 0;
+}
+.fixedfooternavbar ul li a {
+    display: inline-block;
+    color: #fff;
+    font-size: 12px;
+}
+.fixedfooternavbar ul li a i {
+    color: var(--primaryColor);
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+@media (min-width: 992px) {
+    .fixedfooternavbar {
+        display: none;
+    }
+}
+
+
+/* footer section design */
+.footer-section{
+    background-color: #040403;
+}
+
+.footer-heading {
+    color: #fff;
+    font-size: 22px;
+    padding-left: 10px;
+}
+.overview-menu ul {
+    color: #fff;
+    margin: 0 0 15px 18px;
+    padding: 0;
+    list-style-type: circle;
+}
+.overview-menu ul li a{
+    color: #fff;
+    font-size: 16px;
+    line-height: 35px
+}
+.overview-menu ul li :hover{
+    color: var(--primaryColor);
+}
+.Footer-btn {
+    display: inline-grid;
+}
+.btn-cal {
+    margin-top: 10px;
+}
+.footer-blog-section{
+    display: flex;
+    padding-bottom: 30px;
+}
+.footer-blog-section .footer-heading{
+    font-size: 25px;
+}
+.footer-blog-section .btn-rounded{
+    margin-left: 10px;
+}
+/* footerblogrow */
+.footerblogrow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.footerblogrow > * {
+    width: calc(50% - 15px);
+}
+.footersocial-links {
+    display: flex;
+    margin: 20px 0 30px 0;
+    padding: 0;
+    gap: 10px;
+    list-style-type: none;
+}
+.footersocial-links li {
+    display: inline-flex;
+}
+.footersocial-links li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: solid 2px var(--primaryColor);
+    border-radius: 50%;
+    font-size: 20px;
+}
+.footersocial-links li a:hover {
+    background: var(--primaryColor);
+    color: #fff;
+}
+/* address-details-footer */
+.address-details-footer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 15px;
+    color: #fff;
+    margin: 0 0 0 0;
+    padding: 0;
+    list-style-type: none;
+}
+.address-details-footer li {
+    display: flex;
+    position: relative;
+}
+.address-details-footer i {
+    display: inline-flex;
+    width: 30px;
+    margin-top: 2px;
+    color: var(--primaryColor);
+}
+.address-details-footer a {
+    color: inherit;
+}
+.address-details-footer a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+/* footer-copyright */
+.footer-copyright {
+    display: block;
+    background: var(--darkGrayColor2);
+    color: var(--grayColor1);
+}
+.footer-copyright .row > * {
+    padding: 20px 0;
+}
+@media (max-width: 767px) {
+    .footer-copyright {
+        margin-bottom: 64px;
+    }
+}

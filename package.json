@@ -1,0 +1,31 @@
+{
+  "homepage": "https://www.testbytes.net/",
+  "name": "testbytes.net",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export"
+  },
+  "dependencies": {
+    "@splidejs/react-splide": "^0.7.12",
+    "axios": "^1.4.0",
+    "bootstrap": "^5.3.1",
+    "dateformat": "^5.0.3",
+    "dotenv": "^16.3.1",
+    "eslint": "8.46.0",
+    "eslint-config-next": "13.4.12",
+    "moment": "^2.29.4",
+    "next": "13.4.12",
+    "nodemailer": "^6.9.5",
+    "nprogress": "^0.2.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-paginate": "^8.2.0",
+    "react-spinners": "^0.13.8",
+    "react-toastify": "^9.1.3"
+  }
+}

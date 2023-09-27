@@ -1,0 +1,361 @@
+/* rocket */
+.rocket {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.rocket-bg {
+    display: block;
+}
+.rocket-img {
+    position: absolute;
+    bottom:18%;
+    right: 18%;
+    animation: arocket .9s linear infinite;
+}
+.rocket-img img {
+    width: 100%;
+}
+.rocket--contrail {
+    display: block;
+    position: absolute;
+    right: 40%;
+    bottom: 20%;
+    transform: rotate(-45deg);
+}
+.rocket--contrail .rocket--cloud {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+@keyframes arocket {
+    0% {
+        transform: translate(0,0)
+    }
+    50% {
+        transform: translate(5px,5px)
+    }
+    100% {
+        transform: translate(0,0)
+    }
+}
+.rocket--smoke {
+    position: absolute;
+    animation: rocket-ani--smoke 2000ms ease infinite;
+    border-radius: 50%
+}
+.rocket--smoke._s-01 {
+    top: -7px;
+    left: 18px;
+    background: rgba(255,255,255,0.84)
+}
+.rocket--smoke._s-02 {
+    top: 2em;
+    left: 46px;
+    background: rgba(255,255,255,0.84)
+}
+.rocket--smoke._s-03 {
+    top: 1em;
+    left: -12px;
+    background: rgba(255,255,255,0.84)
+}
+.rocket--smoke._s-04 {
+    top: 2em;
+    left: -44px;
+    background: rgba(255,255,255,0.84)
+}
+.rocket--smoke._s-05 {
+    top: 4em;
+    left: 68px;
+    background: rgba(255,255,255,0.84)
+}
+.rocket--smoke._s-06 {
+    top: 3em;
+    left: 12px;
+    background: rgba(255,255,255,0.84)
+}
+.rocket--smoke._s-07 {
+    top: 4em;
+    left: -19px;
+    background: rgba(255,255,255,0.84)
+}
+.rocket--smoke._s-08 {
+    top: 5em;
+    left: 42px;
+    background: rgba(255,255,255,0.84)
+}
+.rocket--smoke._s-09 {
+    top: 32px;
+    left: 80px;
+    background: rgba(255,255,255,0.84);
+    width: 2em;
+    height: 2em
+}
+.rocket--smoke._s-10 {
+    top: 8px;
+    left: -21px;
+    background: rgba(255,255,255,0.84);
+    width: 2em;
+    height: 2em
+}
+.rocket--smoke._s-11 {
+    top: 69px;
+    left: 110px;
+    background: rgba(255,255,255,0.44);
+    width: 3em;
+    height: 3em
+}
+.rocket--smoke._s-12 {
+    top: 55px;
+    left: 140px;
+    background: rgba(255,255,255,0.55);
+    width: 3em;
+    height: 3em
+}
+.rocket--smoke._s-13 {
+    top: 28px;
+    left: 159px;
+    background: rgba(255,255,255,0.35);
+    width: 3em;
+    height: 3em
+}
+.rocket--smoke._s-14 {
+    top: 3px;
+    left: 177px;
+    background: rgba(255,255,255,0.21);
+    width: 3em;
+    height: 3em
+}
+.rocket--smoke._s-15 {
+    top: -14px;
+    left: 204px;
+    background: hsla(0,0%,100%,0.11);
+    width: 2em;
+    height: 2em
+}
+.rocket--smoke._s-16 {
+    top: 83px;
+    left: 90px;
+    background: rgba(255,255,255,0.35);
+    width: 5em;
+    height: 5em
+}
+.rocket--smoke._s-17 {
+    top: 73px;
+    left: 149px;
+    background: rgba(255,255,255,0.15);
+    width: 3em;
+    height: 3em
+}
+.rocket--smoke._s-18 {
+    top: 53px;
+    left: 176px;
+    background: rgba(255,255,255,0.16);
+    width: 2em;
+    height: 2em
+}
+.rocket--smoke._s-19 {
+    top: 102px;
+    left: 48px;
+    background: rgba(255,255,255,0.22);
+    width: 5em;
+    height: 5em
+}
+.rocket--smoke._s-20 {
+    top: 85px;
+    left: -7px;
+    background: rgba(255,255,255,0.14);
+    width: 5em;
+    height: 5em
+}
+.rocket--smoke._s-21 {
+    top: 0;
+    left: -72px;
+    background: rgba(255,255,255,0.7)
+}
+.rocket--smoke._s-22 {
+    top: 7px;
+    left: -94px;
+    background: rgba(255,255,255,0.54);
+    width: 3em;
+    height: 3em
+}
+.rocket--smoke._s-23 {
+    top: 41px;
+    left: -58px;
+    background: rgba(255,255,255,0.28);
+    width: 4em;
+    height: 4em
+}
+.rocket--smoke._s-24 {
+    top: -9px;
+    left: -112px;
+    background: rgba(255,255,255,0.28);
+    width: 3em;
+    height: 3em
+}
+.rocket--smoke._s-25 {
+    top: -29px;
+    left: -113px;
+    background: rgba(255,255,255,0.30);
+    width: 2em;
+    height: 2em
+}
+.rocket--smoke._s-26 {
+    top: -13px;
+    left: -81px;
+    background: rgba(255,255,255,0.28);
+    width: 2em;
+    height: 2em
+}
+.rocket--smoke._s-27 {
+    top: -26px;
+    left: -134px;
+    background: rgba(255,255,255,0.20);
+    width: 2em;
+    height: 2em
+}
+.rocket--smoke._s-28 {
+    top: -39px;
+    left: -121px;
+    background: rgba(255,255,255,0.15);
+    width: 1em;
+    height: 1em
+}
+.rocket--smoke._s-29 {
+    top: 45px;
+    left: 96px;
+    background: rgba(255,255,255,0.84);
+    width: 3em;
+    height: 3em
+}
+.rocket--smoke._s-01 {
+    animation-delay: .4s
+}
+.rocket--smoke._s-02 {
+    animation-delay: .2s
+}
+.rocket--smoke._s-03 {
+    animation-delay: .3s
+}
+.rocket--smoke._s-04 {
+    animation-delay: .4s
+}
+.rocket--smoke._s-05 {
+    animation-delay: .5s
+}
+.rocket--smoke._s-06 {
+    animation-delay: .6s
+}
+.rocket--smoke._s-07 {
+    animation-delay: .7s
+}
+.rocket--smoke._s-08 {
+    animation-delay: .8s
+}
+.rocket--smoke._s-09 {
+    animation-delay: .9s
+}
+.rocket--smoke._s-010 {
+    animation-delay: .7s
+}
+.rocket--smoke._s-11 {
+    animation-delay: .8s
+}
+.rocket--smoke._s-12 {
+    animation-delay: .9s
+}
+.rocket--smoke._s-13 {
+    animation-delay: .7s
+}
+.rocket--smoke._s-14 {
+    animation-delay: .8s
+}
+.rocket--smoke._s-15 {
+    animation-delay: .9s
+}
+.rocket--smoke._s-16 {
+    animation-delay: .7s
+}
+.rocket--smoke._s-17 {
+    animation-delay: .8s
+}
+.rocket--smoke._s-18 {
+    animation-delay: .9s
+}
+.rocket--smoke._s-19 {
+    animation-delay: .7s
+}
+.rocket--smoke._s-20 {
+    animation-delay: .8s
+}
+.rocket--smoke._s-21 {
+    animation-delay: .7s
+}
+.rocket--smoke._s-22 {
+    animation-delay: .8s
+}
+.rocket--smoke._s-24 {
+    animation-delay: .9s
+}
+.rocket--smoke._s-25 {
+    animation-delay: .7s
+}
+.rocket--smoke._s-26 {
+    animation-delay: .8s
+}
+.rocket--smoke._s-27 {
+    animation-delay: .9s
+}
+.rocket--smoke._s-28 {
+    animation-delay: .7s
+}
+.rocket--smoke._s-29 {
+    animation-delay: .8s
+}
+.rocket--smoke._s-30 {
+    animation-delay: .9s
+}
+@keyframes rocket-ani--smoke {
+    0% {
+        transform: scale(1)
+    }
+    50% {
+        transform: scale(0)
+    }
+    100% {
+        transform: scale(1)
+    }
+}
+
+@media (max-width: 991px) {
+    .rocket {
+        position: relative;
+    }
+    .rocket-bg,
+    .rocket-bg img {
+        width: 100%;
+    }
+    .rocket-bg img {
+        height: auto;
+    }
+}
+@media (max-width: 600px) {
+    .rocket-img {
+        bottom: 15%;
+        right: 1%;
+    }
+    .rocket-img img {
+        width: 70%;
+    }
+}
+@media (max-width: 450px) {
+    .rocket-img {
+        right: -25%;
+    }
+    .rocket-img img {
+        width: 50%;
+    }
+}

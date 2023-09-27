@@ -1,0 +1,407 @@
+
+/* .........................Cost App............... */
+
+
+
+/* .........................Cost App............... */
+
+
+/*testcost-containerfluid*/
+.testcost-containerfluid,
+.testcost-containerfluid .testcost-contentwrapper {
+    display: block;
+}
+.testcost-containerfluid .testcost-contentwrapper {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.testcost-img-column {
+    margin-left: -15px;
+}
+@media (min-width: 992px) {
+    .testcost-containerfluid .testcost-contentwrapper {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+}
+
+/* validation-wrapper */
+.was-validated:invalid .validation-wrapper .invalid-feedback {
+    display: inline-flex;
+    width: auto;
+    margin-top: 0;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+/*costcalcbody*/
+body.costcalcbody {
+    background: #fdfdfd;
+}
+body.costcalcbody .navbar-light.bg-light {
+    background: #e1e0fe !important;
+}
+
+/* stepfield-options-block */
+.stepfield-options-block {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    padding: 0;
+}
+.stepfield-options-block label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 20px;
+    position: relative;
+    
+}
+.stepfield-options-block label input {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+}
+.stepfield-options-block label div,
+.step2optionmain label div {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border: 2px solid var(--secondaryColor);
+    border-radius: 50%;
+    font-size: 30px;
+    color: lightcoral;
+    margin-right: 10px;
+}
+.stepfield-options-block label input:checked~div {
+    background: linear-gradient(125.58deg, #ffffff 40%, #e9b29b 79.41%);
+    color: #fff;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 15%);
+}
+.stepfield-options-block label span {
+    font-weight: bold;
+    font-size: 16px;
+}
+.stepfield-options-block label div:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0%;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border-radius: 50px;
+    opacity: 0;
+    visibility: hidden;
+}
+.stepfield-options-block label div:after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 15px;
+    border-bottom: solid 2px var(--secondaryColor);
+    border-right: solid 2px var(--secondaryColor);
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translate(0, -50%) rotate(45deg);
+    opacity: 0;
+    visibility: hidden;
+}
+.stepfield-options-block label input:checked~div:before,
+.stepfield-options-block label input:checked~div:after {
+    opacity: 1;
+    visibility: visible;
+}
+.stepfield-options-block label div i {
+    font-size: 20px;
+    background: linear-gradient(325.23deg, #eb5525 12.61%, #2c2a6b 87.96%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@media (min-width: 992px) {
+    .stepfield-options-block label {
+        margin-bottom: 1vw;
+    }
+    .stepfield-options-block label div,
+    .step2optionmain label div {
+        width: 4vw;
+        height: 4vw;
+        border: 0.15vw solid var(--secondaryColor);
+        font-size: 1.5vw;
+        margin-right: 1vw;
+    }
+    .stepfield-options-block label span {
+        font-size: 0.8vw;
+    }
+    .stepfield-options-block label div i {
+        font-size: 1.5vw;
+    }
+}
+
+
+
+
+/* external interface UI */
+.cal_step3Caintain {
+    display: flex;
+}
+.cal_step3Caintain > label {
+    display: flex;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: #000;
+    position: relative;
+    margin-bottom: 30px;
+}
+.cal_step3Caintain.cal_step3Caintain-numbofextui {
+    height: 220px;
+}
+.cal_step3Caintain > label > div {
+    display: block;
+    width: inherit;
+    padding: 20px;
+    box-shadow: 0px 10px 40px rgb(0 0 0 / 20%);
+    border-radius: 20px;
+    background: #fff;
+}
+.cal_step3Caintain > label p {
+    font-weight: bold;
+}
+.cal_step3Caintain > label p:nth-of-type(1) {
+    font-size: 20px;
+}
+.cal_step3Caintain > label p:nth-of-type(2) {
+    font-size: 30px;
+}
+.cal_step3Caintain > label i {
+    font-size: 30px;
+}
+.cal_step3Caintain > label p,
+.cal_step3Caintain > label i {
+    position: relative;
+    z-index: 1;
+}
+.cal_step3Caintain > label input {
+    position: absolute;
+    opacity: 0;
+}
+.cal_step3Caintain > label input:checked ~ div {
+    color: #fff;
+    background: linear-gradient(319.21deg, #eb5525 3.96%, #2d2a6f 95.6%);
+}
+@media (max-width: 1500px) {
+    .cal_step3Caintain > label > div {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .cal_step3Caintain > label p:nth-of-type(1) {
+        font-size: 16px;
+    }
+    .cal_step3Caintain > label p:nth-of-type(2) {
+        font-size: 20px;
+    }
+}
+/* cal_step3Caintain-circle */
+.cal_step3Caintain-circle > label {
+    padding-bottom: 100%;
+}
+.cal_step3Caintain-circle > label div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+}
+.cal_step3Caintain-circle > label div i {
+    font-size: 60px;
+}
+.cal_step3Caintain > label div i {
+    background: linear-gradient(325.23deg, #eb5525 12.61%, #2c2a6b 87.96%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.cal_step3Caintain > label input:checked ~ div i {
+    background: transparent;
+    -webkit-text-fill-color: #fff;
+}
+@media (min-width: 992px) {
+    .cal_step3Caintain > label {
+        margin-bottom: 0;
+    }
+}
+@media (max-width: 991px) {
+    .cal_step3Caintain-circle {
+        justify-content: center;
+    }
+    .cal_step3Caintain-circle > label {
+        width: 50%;
+        padding-bottom: 50%;
+    }
+}
+
+/*testeffort-calc-counter*/
+.testeffort-calc-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+.testeffort-calc-counter > * {
+    display: inline-flex;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+.testeffort-calc-counter > div {
+    width: 60px;
+    border-radius: 50%;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    cursor: pointer;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--primaryColor);
+    position: relative;
+}
+.testeffort-calc-counter > div:nth-of-type(1) {
+    left: 60px;
+}
+.testeffort-calc-counter > div:nth-of-type(2) {
+    right: 60px;
+}
+.testeffort-calc-counter > input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 26px;
+    width: 250px;
+    border: solid 1px var(--lightskyblueColor);
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    border-radius: 50px;
+}
+/* hide numbers increment/decrement */
+.testeffort-calc-counter > input::-webkit-outer-spin-button,
+.testeffort-calc-counter > input::-webkit-inner-spin-button,
+.testcost-laststep-formcol input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.testeffort-calc-counter > input[type=number],
+.testcost-laststep-formcol input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/*.test-cost-testcyclesformrow*/
+.test-cost-testcyclesformrow .form-check-input {
+    width: 25px;
+    height: 25px;
+}
+.test-cost-testcyclesformrow .form-check-input:checked {
+    background-color: var(--primaryColor);
+    border-color: var(--primaryColor);
+}
+.test-cost-testcyclesformrow label {
+    font-weight: bold;
+    font-size: 20px;
+}
+/*testcost-laststep-formcol*/
+.testcost-laststep-formcol {
+    display: block;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.15);
+}
+.testcost-laststep-formcol input[type="text"],
+.testcost-laststep-formcol input[type="email"],
+.testcost-laststep-formcol input[type="number"],
+.testcost-laststep-formcol textarea , .inputDesign {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-top: none;
+    border-right: none;
+    border-bottom: solid 2px var(--lightskyblueColor);
+    background: transparent;
+    line-height: 1;
+    outline: none;
+    border-left: none;
+    margin-bottom: 10px;
+}
+.testcost-laststep-formcol textarea {
+    height: auto;
+    min-height: 100px;
+    max-height: 250px;
+    padding-top: 10px;
+}
+.img-thumbnail{
+    width: 40px;
+    height: 40px;
+}
+
+
+/* Test Cost Calc Result Page Css */
+#cust_det table tr:nth-child(odd) {
+    background: #fff;
+}
+#cust_det table tr:nth-child(even) {
+    background: #f7f7f7;
+}
+#cust_det table tr td {
+    /* background-color: #fff; */
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+#cust_det tr td h2 span {
+    font-weight: bold !important;
+    font-family: inherit !important;
+}
+#cust_det table tr td:last-child {
+    color: #000 !important;
+    font-weight: bold;
+    font-size: 20px;
+}
+#cust_det table tr td:hover{
+    background-color: #b3b3b3;
+    color:#fff !important;
+}
+#resultpage p {
+    color: #000 !important;
+    font-size: 20px !important;
+    text-align: center;
+    font-weight: bold; 
+}
+#cust_det > tbody > tr:nth-of-type(4),
+#cust_det > tbody > tr:nth-of-type(4) tr {
+    background: transparent;
+}
+#cust_det > tbody > tr:nth-of-type(4) tr td:first-child {
+    border: none;
+}
+
+
+#text01 {
+    background: none;
+    margin: 1em 0;
+    height: 50px !important;
+    width: 100%;
+    border: 1px solid #b9b9b9;
+    outline: none;
+}
