@@ -22,7 +22,7 @@ export default function EventsList() {
 
   const query = `
     query NewQuery {
-      events(first: 100) {
+      events(first: 5) {
         nodes {
           slug
           title

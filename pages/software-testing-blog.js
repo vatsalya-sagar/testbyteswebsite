@@ -37,8 +37,8 @@ export default function Blog({recentblogsdata, webblogData, mobileblogData, auto
                             <h4 className="mb-4 heading-with-gradient d-flex">
                                 <span className="me-auto">Web App Testing</span>
                                 <div className="ms-auto">
-                                    <Link href={`/category/${webblogData.data.category.slug}`} className="btn btn-default btn-rounded px-3">
-                                        View <strong>{webblogData.data.category.count}</strong> more blogs
+                                    <Link href={`/category/${webblogData?.data.category.slug}`} className="btn btn-default btn-rounded px-3">
+                                        View <strong>{webblogData?.data.category.count}</strong> more blogs
                                     </Link>
                                 </div>
                             </h4>
@@ -48,8 +48,8 @@ export default function Blog({recentblogsdata, webblogData, mobileblogData, auto
                             <h4 className="mb-4 heading-with-gradient d-flex">
                                 <span className="me-auto">Mobile App Testing</span>
                                 <div className="ms-auto">
-                                    <Link href={`/category/${mobileblogData.data.category.slug}`} className="btn btn-default btn-rounded px-3">
-                                        View <strong>{mobileblogData.data.category.count}</strong> more blogs
+                                    <Link href={`/category/${mobileblogData?.data.category.slug}`} className="btn btn-default btn-rounded px-3">
+                                        View <strong>{mobileblogData?.data.category.count}</strong> more blogs
                                     </Link>
                                 </div>
                             </h4>
@@ -58,8 +58,8 @@ export default function Blog({recentblogsdata, webblogData, mobileblogData, auto
                             <h4 className="mb-4 heading-with-gradient d-flex">
                                 <span className="me-auto">Automation Testing</span>
                                 <div className="ms-auto">
-                                    <Link href={`/category/${automationblogData.data.category.slug}`} className="btn btn-default btn-rounded px-3">
-                                        View <strong>{automationblogData.data.category.count}</strong> more blogs
+                                    <Link href={`/category/${automationblogData?.data.category.slug}`} className="btn btn-default btn-rounded px-3">
+                                        View <strong>{automationblogData?.data.category.count}</strong> more blogs
                                     </Link>
                                 </div>
                             </h4>
@@ -88,7 +88,7 @@ export async function getStaticProps() {
                 category(idType: SLUG, id: "web-app-testing") {
                   count
                   slug
-                  posts(first: 3) {
+                  posts(first: 5) {
                     nodes {
                       title
                       featuredImage {
@@ -120,7 +120,7 @@ export async function getStaticProps() {
               slug
               count
               name
-              posts(first: 3) {
+              posts(first: 5) {
                 nodes {
                   date
                   slug
@@ -151,7 +151,7 @@ export async function getStaticProps() {
             slug
             count
             name
-            posts(first: 3) {
+            posts(first: 5) {
               nodes {
                 date
                 slug
@@ -178,7 +178,7 @@ const automationblogData = await catrescat3.json();
         body: JSON.stringify({
             query: `
             query MyQuery2 {
-                posts(first: 3) {
+                posts(first: 5) {
                   nodes {
                     slug
                     title
@@ -202,7 +202,7 @@ const automationblogData = await catrescat3.json();
         body: JSON.stringify({
             query: `
             query MyQuery2 {
-              categories(first: 10) {
+              categories(first: 5) {
                 nodes {
                   name
                   slug

@@ -120,7 +120,7 @@ export async function getStaticProps({}) {
       body: JSON.stringify({
         query: `
         query NewQuery {
-          events (first: 6){
+          events (first: 10){
             nodes {
               slug
               title

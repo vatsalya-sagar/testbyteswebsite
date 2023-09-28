@@ -48,107 +48,109 @@ export default function PageSingle({
         </div>
       </>
     );
-  } else if (postsinglepage.data.post !== null) {
-    return (
-      <>
-        <Head>
-          <title>{postsinglepage.data.post.title}</title>
-          <meta name="robots" content="index, follow" />
-          <meta
-            name="description"
-            content={postsinglepage.data.post.seo.metaDesc}
-          />
-          <link
-            rel="canonical"
-            href={`https://www.testbytes.net/${postsinglepage.data.post.slug}`}
-          />
-          <meta property="og:locale" content="en_US" />
-          <meta property="og:type" content="website" />
-          <meta property="og:title" content={postsinglepage.data.post.title} />
-          <meta
-            property="og:description"
-            content={postsinglepage.data.post.seo.metaDesc}
-          />
-          <meta
-            property="og:url"
-            content={`https://www.testbytes.net/${postsinglepage.data.post.slug}`}
-          />
-          <meta property="og:site_name" content="Testbytes Softwares" />
-          <meta name="twitter:card" content="summary" />
-        </Head>
+  } 
+  
+  // else if (postsinglepage.data.post !== null) {
+  //   return (
+  //     <>
+  //       <Head>
+  //         <title>{postsinglepage.data.post.title}</title>
+  //         <meta name="robots" content="index, follow" />
+  //         <meta
+  //           name="description"
+  //           content={postsinglepage.data.post.seo.metaDesc}
+  //         />
+  //         <link
+  //           rel="canonical"
+  //           href={`https://www.testbytes.net/${postsinglepage.data.post.slug}`}
+  //         />
+  //         <meta property="og:locale" content="en_US" />
+  //         <meta property="og:type" content="website" />
+  //         <meta property="og:title" content={postsinglepage.data.post.title} />
+  //         <meta
+  //           property="og:description"
+  //           content={postsinglepage.data.post.seo.metaDesc}
+  //         />
+  //         <meta
+  //           property="og:url"
+  //           content={`https://www.testbytes.net/${postsinglepage.data.post.slug}`}
+  //         />
+  //         <meta property="og:site_name" content="Testbytes Softwares" />
+  //         <meta name="twitter:card" content="summary" />
+  //       </Head>
 
-        <main id="cx-blog-main">
-          <div className="container-fluid">
-            <div className="row">
-              <div className="col-lg-3">
-                <BlogLeftSidebar />
-              </div>
-              <div className="col-lg-6 mb-5 mainblogcontentpage">
-                <a
-                  href="https://www.testbytes.net/career/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img
-                    src="https://testbytesnxtjsbackend.technoallianceindia.com/wp-content/uploads/2021/04/Hiring-performance-banner-newww-1-1.jpg"
-                    alt="Testbytes IN website"
-                    style={{ width: `100%`, height: `auto` }}
-                  />
-                </a>
-                <div className="blog-breadcrumbs mt-3 mb-3">
-                  <ul>
-                    <li>
-                      <Link href="/">Home</Link>
-                    </li>
-                    <li>
-                      <Link href="/software-testing-blog">Blog</Link>
-                    </li>
-                    <li>
-                      <Link
-                        href={`/category/${postsinglepage.data.post.categories.nodes[0].slug}`}
-                      >
-                        {postsinglepage.data.post.categories.nodes[0].name}
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                <h1
-                  className="mb-4 fw-bold"
-                  dangerouslySetInnerHTML={{
-                    __html: `${postsinglepage.data.post.title}`,
-                  }}
-                ></h1>
-                <h5 className="mb-4">{dateFormat(postsinglepage.data.post.date, "mmmm dS, yyyy")}</h5>
-                <div className="mainblogcenteredcontent">
-                  <div className="bloginner-imgfeat mb-4">
-                    {postsinglepage.data.post.featuredImage !== null && (
-                      <>
-                        <img
-                          src={
-                            postsinglepage.data.post.featuredImage.node
-                              .sourceUrl
-                          }
-                          alt={postsinglepage.data.post.title}
-                        />
-                      </>
-                    )}
-                  </div>
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: `${postsinglepage.data.post.content}`,
-                    }}
-                  ></div>
-                </div>
-              </div>
-              <div className="col-lg-3">
-                <BlogRightSidebar sidebarrecentdata={recentblogsdata} />
-              </div>
-            </div>
-          </div>
-        </main>
-      </>
-    );
-  }
+  //       <main id="cx-blog-main">
+  //         <div className="container-fluid">
+  //           <div className="row">
+  //             <div className="col-lg-3">
+  //               <BlogLeftSidebar />
+  //             </div>
+  //             <div className="col-lg-6 mb-5 mainblogcontentpage">
+  //               <a
+  //                 href="https://www.testbytes.net/career/"
+  //                 target="_blank"
+  //                 rel="noreferrer"
+  //               >
+  //                 <img
+  //                   src="https://testbytesnxtjsbackend.technoallianceindia.com/wp-content/uploads/2021/04/Hiring-performance-banner-newww-1-1.jpg"
+  //                   alt="Testbytes IN website"
+  //                   style={{ width: `100%`, height: `auto` }}
+  //                 />
+  //               </a>
+  //               <div className="blog-breadcrumbs mt-3 mb-3">
+  //                 <ul>
+  //                   <li>
+  //                     <Link href="/">Home</Link>
+  //                   </li>
+  //                   <li>
+  //                     <Link href="/software-testing-blog">Blog</Link>
+  //                   </li>
+  //                   <li>
+  //                     <Link
+  //                       href={`/category/${postsinglepage.data.post.categories.nodes[0].slug}`}
+  //                     >
+  //                       {postsinglepage.data.post.categories.nodes[0].name}
+  //                     </Link>
+  //                   </li>
+  //                 </ul>
+  //               </div>
+  //               <h1
+  //                 className="mb-4 fw-bold"
+  //                 dangerouslySetInnerHTML={{
+  //                   __html: `${postsinglepage.data.post.title}`,
+  //                 }}
+  //               ></h1>
+  //               <h5 className="mb-4">{dateFormat(postsinglepage.data.post.date, "mmmm dS, yyyy")}</h5>
+  //               <div className="mainblogcenteredcontent">
+  //                 <div className="bloginner-imgfeat mb-4">
+  //                   {postsinglepage.data.post.featuredImage !== null && (
+  //                     <>
+  //                       <img
+  //                         src={
+  //                           postsinglepage.data.post.featuredImage.node
+  //                             .sourceUrl
+  //                         }
+  //                         alt={postsinglepage.data.post.title}
+  //                       />
+  //                     </>
+  //                   )}
+  //                 </div>
+  //                 <div
+  //                   dangerouslySetInnerHTML={{
+  //                     __html: `${postsinglepage.data.post.content}`,
+  //                   }}
+  //                 ></div>
+  //               </div>
+  //             </div>
+  //             <div className="col-lg-3">
+  //               <BlogRightSidebar sidebarrecentdata={recentblogsdata} />
+  //             </div>
+  //           </div>
+  //         </div>
+  //       </main>
+  //     </>
+  //   );
+  // }
 }
 
 export async function getStaticPaths() {
@@ -158,7 +160,7 @@ export async function getStaticPaths() {
     body: JSON.stringify({
       query: `
       query NewQuery {
-        pages(first: 5) {
+        pages(first: 4) {
           nodes {
             pageId
             slug
@@ -175,7 +177,8 @@ export async function getStaticPaths() {
   }));
   return {
     paths,
-    fallback: "blocking",
+    // fallback: "blocking",
+    fallback: false
   };
 }
 
@@ -206,75 +209,75 @@ export async function getStaticProps({ params }) {
 
   const AllsinglePageList = await currentApi.json();
 
-  // Get Single post data
-  const postres = await fetch(`${BASEPATH}graphql`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      query: `
-          query MyQuery2 {
-            post(id: "${params.pageslug}", idType: SLUG) {
-              id
-              date
-              content
-              title
-              seo {
-                metaDesc
-              }
-              slug
-              author {
-                node {
-                  name
-                }
-              }
-              categories {
-                nodes {
-                  slug
-                  name
-                }
-              }
-              featuredImage {
-                node {
-                  sourceUrl
-                }
-              }
-            }
-          }
-      `,
-    }),
-  });
-  const postsinglepage = await postres.json();
+  // // Get Single post data
+  // const postres = await fetch(`${BASEPATH}graphql`, {
+  //   method: "POST",
+  //   headers: { "Content-Type": "application/json" },
+  //   body: JSON.stringify({
+  //     query: `
+  //         query MyQuery2 {
+  //           post(id: "${params.pageslug}", idType: SLUG) {
+  //             id
+  //             date
+  //             content
+  //             title
+  //             seo {
+  //               metaDesc
+  //             }
+  //             slug
+  //             author {
+  //               node {
+  //                 name
+  //               }
+  //             }
+  //             categories {
+  //               nodes {
+  //                 slug
+  //                 name
+  //               }
+  //             }
+  //             featuredImage {
+  //               node {
+  //                 sourceUrl
+  //               }
+  //             }
+  //           }
+  //         }
+  //     `,
+  //   }),
+  // });
+  // const postsinglepage = await postres.json();
 
-  // Recent blogs
-  const recentblogsres = await fetch(`${BASEPATH}graphql`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      query: `
-          query MyQuery2 {
-            posts(first: 5) {
-              nodes {
-                date
-                slug
-                title
-                featuredImage {
-                  node {
-                    sourceUrl
-                  }
-                }
-              }
-            }
-          }
-        `,
-    }),
-  });
-  const recentblogsdata = await recentblogsres.json();
+  // // Recent blogs
+  // const recentblogsres = await fetch(`${BASEPATH}graphql`, {
+  //   method: "POST",
+  //   headers: { "Content-Type": "application/json" },
+  //   body: JSON.stringify({
+  //     query: `
+  //         query MyQuery2 {
+  //           posts(first: 5) {
+  //             nodes {
+  //               date
+  //               slug
+  //               title
+  //               featuredImage {
+  //                 node {
+  //                   sourceUrl
+  //                 }
+  //               }
+  //             }
+  //           }
+  //         }
+  //       `,
+  //   }),
+  // });
+  // const recentblogsdata = await recentblogsres.json();
 
   return {
     props: {
       AllsinglePageList,
-      postsinglepage,
-      recentblogsdata,
+      // postsinglepage,
+      // recentblogsdata,
     },
     revalidate: 10,
   };

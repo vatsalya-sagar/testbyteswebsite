@@ -13,7 +13,7 @@ export default function BlogLeftSidebar({}) {
       data: {
         query: `
             query NewQuery {
-                categories (first:100) {
+                categories (first:5) {
                   nodes {
                     slug
                     name

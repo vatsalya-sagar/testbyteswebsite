@@ -22,7 +22,7 @@ export default function AllSpeakersList() {
 
   const query = `
     query NewQuery {
-      speakers(first: 100) {
+      speakers(first: 5) {
         nodes {
           slug
           title

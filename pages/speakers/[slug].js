@@ -66,13 +66,13 @@ export async function getStaticPaths() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         query: `
-            query NewQuery {
-                speakers {
-                  nodes {
-                    slug
-                  }
-                }
-              }
+        query NewQuery {
+          speakers(first: 4) {
+            nodes {
+              slug
+            }
+          }
+        }
             `,
       }),
     }
@@ -84,7 +84,8 @@ export async function getStaticPaths() {
   //   console.log("Filtered Pathssss: ", paths);
   return {
     paths: [...paths],
-    fallback: "blocking",
+     fallback: "blocking",
+    // fallback: false
   };
 }
 

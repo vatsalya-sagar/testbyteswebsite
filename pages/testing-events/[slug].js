@@ -12,8 +12,8 @@ const SingleEvent = ({ eventData, categoriesData }) => {
   // const [speakerData, setSpeakerData] = useState(second)
   // const categories = categoriesData.data.categories.nodes;
   // console.log(categoriesData.data.categories.nodes);
-  const categories = categoriesData.data.categories.nodes; 
-  let eventMain_data = eventData.data.eventBy;
+  const categories = categoriesData?.data.categories.nodes; 
+  let eventMain_data = eventData?.data.eventBy;
 
   const customCategories = [
     "Mobile App Testing",
@@ -41,7 +41,7 @@ const SingleEvent = ({ eventData, categoriesData }) => {
               <div className="category_list">
                 <p><strong>Blog Category</strong></p>
                 <ul>
-                  {categories.map((category, index) => {
+                  {categories?.map((category, index) => {
                     // {console.log(category.count)}
                     // Check if the category name is in customCategories
                     if (customCategories.includes(category.name)) {
@@ -254,13 +254,13 @@ export async function getStaticPaths() {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       query: `
-        query NewQuery {
-          events {
-            nodes {
-              slug
-            }
+      query NewQuery {
+        events(first: 3) {
+          nodes {
+            slug
           }
         }
+      }
       `,
     }),
   });
@@ -274,7 +274,9 @@ export async function getStaticPaths() {
 
   return {
     paths: [...eventPaths],
-    fallback: "blocking",
+    // fallback: "blocking",
+    fallback: false,
+    
   };
 }
 

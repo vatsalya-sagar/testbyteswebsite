@@ -77,7 +77,7 @@ export async function getStaticProps() {
                 query GameTesting {
                     resourceCat(id: "game-testing", idType: SLUG) {
                       count
-                      resources(first: 5) {
+                      resources(first: 4) {
                         nodes {
                           title
                           slug

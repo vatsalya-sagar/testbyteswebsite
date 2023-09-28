@@ -33,7 +33,7 @@ export default function automationtesting({ AMobileTest }) {
         <div className='container'>
           <div className="row">
 
-            {AMobileTest.data.resourceCat.resources.nodes.map((item) => (
+            {AMobileTest?.data?.resourceCat?.resources.nodes.map((item) => (
             
                   // {item.featuredImage.node.guid}
                   // {item.featuredImage.node.altText}
@@ -77,7 +77,7 @@ export async function getStaticProps() {
         query AutoTesting {
           resourceCat(id: "automation-testing", idType: SLUG) {
             count
-            resources(first: 5) {
+            resources(first: 4) {
               nodes {
                 title
                 slug

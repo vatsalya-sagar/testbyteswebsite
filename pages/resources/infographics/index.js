@@ -537,7 +537,7 @@ export async function getStaticProps() {
                       name
                       slug
                     }
-                    resources(first: 5) {
+                    resources(first: 4) {
                       nodes {
                         title
                         slug
@@ -568,7 +568,7 @@ export async function getStaticProps() {
                       count
                       name
                       slug
-                      resources(first: 5) {
+                      resources(first: 4) {
                         nodes {
                           title
                           slug
@@ -601,7 +601,7 @@ export async function getStaticProps() {
                       count
                       name
                       slug
-                      resources(first: 5) {
+                      resources(first: 4) {
                         nodes {
                           title
                           slug
@@ -634,7 +634,7 @@ export async function getStaticProps() {
                       count
                       name
                       slug
-                      resources(first: 5) {
+                      resources(first: 4) {
                         nodes {
                           title
                           slug
@@ -667,7 +667,7 @@ export async function getStaticProps() {
                       count
                       name
                       slug
-                      resources(first: 5) {
+                      resources(first: 4) {
                         nodes {
                           title
                           slug
@@ -700,7 +700,7 @@ export async function getStaticProps() {
                       count
                       name
                       slug
-                      resources(first: 5) {
+                      resources(first: 4) {
                         nodes {
                           title
                           slug

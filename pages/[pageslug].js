@@ -8,6 +8,7 @@ import dateFormat from "dateformat";
 import Link from "next/link";
 import { validateConfig } from "next/dist/server/config-shared";
 
+
 export default function PageSingle({
     AllsinglePageList,
     postsinglepage,
@@ -18,18 +19,18 @@ export default function PageSingle({
 
     console.log('Page data show: ', AllsinglePageList)
 
-    if (AllsinglePageList.data.page !== null) {
+    if (AllsinglePageList?.data.page !== null) {
         return (
             <>
                 <Head>
-                    <title>{AllsinglePageList.data.page.seo.title}</title>
+                    <title>{AllsinglePageList?.data.page.seo.title}</title>
                     <meta
                         name="deScription"
-                        content={AllsinglePageList.data.page.seo.metaDesc}
+                        content={AllsinglePageList?.data.page.seo.metaDesc}
                     />
                     <link
                         rel="canonical"
-                        href={`https://www.testbytes.net/${AllsinglePageList.data.page.slug}`}
+                        href={`https://www.testbytes.net/${AllsinglePageList?.data.page.slug}`}
                     />
                     <meta
                         name="image"
@@ -37,9 +38,9 @@ export default function PageSingle({
                         content="/images/TestBytes_OG.jpg"
                     />
                     <meta property="og:type" content="website" />
-                    <meta property="og:title" content={AllsinglePageList.data.page.seo.title} className="yoast-seo-meta-tag" />
-                    <meta property="og:deScription" content={AllsinglePageList.data.page.seo.metaDesc} className="yoast-seo-meta-tag" />
-                    <meta property="og:url" content={`https://www.testbytes.net/${AllsinglePageList.data.page.slug}`} className="yoast-seo-meta-tag" />
+                    <meta property="og:title" content={AllsinglePageList?.data.page.seo.title} className="yoast-seo-meta-tag" />
+                    <meta property="og:deScription" content={AllsinglePageList?.data.page.seo.metaDesc} className="yoast-seo-meta-tag" />
+                    <meta property="og:url" content={`https://www.testbytes.net/${AllsinglePageList?.data.page.slug}`} className="yoast-seo-meta-tag" />
                     <meta property="og:site_name" content="Testbytes" className="yoast-seo-meta-tag" />
                     <link rel="stylesheet" href={`https://testbytesnxtjsbackend.technoallianceindia.com/wp-content/uploads/elementor/css/post-${AllsinglePageList.data.page.pageId}.css`} media="all" />
 
@@ -49,21 +50,21 @@ export default function PageSingle({
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-7">
-                                <h1 dangerouslySetInnerHTML={{ __html: `${AllsinglePageList.data.page.title}` }}></h1>
+                                <h1 dangerouslySetInnerHTML={{ __html: `${AllsinglePageList?.data.page.title}` }}></h1>
                                 {/* {AllsinglePageList.data.page.seo.metaDesc !== null &&
                                     <h3 dangerouslySetInnerHTML={{ __html: `${AllsinglePageList.data.page.seo.metaDesc}` }}></h3>
                                 } */}
                             </div>
                             <div className="col-lg-5">
-                                {AllsinglePageList.data.page.featuredImage !== null &&
+                                {AllsinglePageList?.data.page.featuredImage !== null &&
                                     <div className="innerpages-maintop-banner-imgwith-mask">
                                         <div>
-                                            <img src={AllsinglePageList.data.page.featuredImage.node.sourceUrl} alt={AllsinglePageList.data.page.title} />
+                                            <img src={AllsinglePageList?.data.page.featuredImage.node.sourceUrl} alt={AllsinglePageList.data.page.title} />
                                         </div>
                                     </div>
                                 }
 
-                                {AllsinglePageList.data.page.featuredImage == null &&
+                                {AllsinglePageList?.data.page.featuredImage == null &&
                                     <div className="innerpages-maintop-banner-imgwith-mask">
                                         <div>
                                             <img src="https://testbytesnxtjsbackend.technoallianceindia.com/wp-content/uploads/2023/09/testing.jpg" alt={AllsinglePageList.data.page.title} />
@@ -199,7 +200,7 @@ export async function getStaticPaths() {
         body: JSON.stringify({
             query: `
             query NewQuery {
-              pages(first: 5) {
+              pages(first: 10) {
                 nodes {
                   pageId
                   slug
@@ -216,7 +217,8 @@ export async function getStaticPaths() {
     }));
     return {
         paths,
-        fallback: "blocking",
+         fallback: "blocking",
+        // fallback: false
     };
 }
 
@@ -295,7 +297,7 @@ export async function getStaticProps({ params }) {
         body: JSON.stringify({
             query: `
           query MyQuery2 {
-            posts(first: 5) {
+            posts(first: 10) {
               nodes {
                 date
                 slug
@@ -319,7 +321,7 @@ export async function getStaticProps({ params }) {
         body: JSON.stringify({
             query: `
               query MyQuery2 {
-                  categories(first: 5) {
+                  categories(first: 10) {
                       nodes {
                           name
                           slug
