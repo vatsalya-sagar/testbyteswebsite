@@ -1,11 +1,15 @@
 import react, { useState, useEffect } from "react"
+import { useRouter } from 'next/router'
 
 export default function ContactForm() {
+
+    const router  = useRouter();
     // Local state for holding form data
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phoneField, setPhoneField] = useState('');
     const [message, setMessage] = useState('');
+    
 
     //Form validation
     useEffect(() => {
@@ -91,7 +95,9 @@ export default function ContactForm() {
             })
         }).then((res) => {
             console.log('Response received')
-            if (res.status === 200) {
+            if (res.status === 200) 
+            {
+                router.push('/thank-you')
                 console.log('Response succeeded!');
             } else {
                 console.log('Something went wrong...please check')

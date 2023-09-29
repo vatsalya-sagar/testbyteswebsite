@@ -14,7 +14,7 @@ const SpeakerSinglePage = (singlepage) => {
     <>
       <section className="top_hero_img">
         <img
-          src="https://old.testbytes.net/wp-content/uploads/2022/08/coverimg.png"
+          src="https://testbytesnxtjsbackend.technoallianceindia.com/wp-content/uploads/2023/09/coverimg.png"
           className="hero_img"
         />
       </section>
@@ -35,7 +35,7 @@ const SpeakerSinglePage = (singlepage) => {
               </span>
               <br />
               <a href={recieveData?.linkedinLink} target="_blank">
-                <img src="https://old.testbytes.net/wp-content/uploads/2022/08/linkedin.svg" />
+                <img src="https://testbytesnxtjsbackend.technoallianceindia.com/wp-content/uploads/2023/09/linkedin.svg" />
               </a>{" "}
               <br />
               <Link href="/speakers-list" className="back_btn">

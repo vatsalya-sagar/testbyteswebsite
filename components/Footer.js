@@ -28,7 +28,7 @@ export default function Header() {
                                 </ul>
                                 <div className="Footer-btn">
                                     <Link className='btn btn-transparent btn-rounded px-4' href="/hire-a-tester/">Hire Tester</Link>
-                                    <Link className='mb-4 btn btn-transparent btn-rounded btn-cal px-4' href="/test-cost-calculator/">Test Cost Calculator</Link>
+                                    <Link className='mb-4 btn btn-transparent btn-rounded btn-cal px-4'  href="/test-cost-calculator">Test Cost Calculator</Link>
                                 </div>
                             </div>
                         </div>
@@ -39,10 +39,10 @@ export default function Header() {
                                 <ul>
                                     <li><Link href='/mobile-app-testing/'>Mobile App Testing</Link></li>
                                     <li><Link href='/web-application-testing-services/'>Web App Testing</Link></li>
-                                    <li><Link href='/software-testing-services/game-testing/'></Link>Game Testing</li>
+                                    <li><Link href='/game-testing/'></Link>Game Testing</li>
                                     <li><Link href='/automation-testing/'>Automation Testing</Link></li>
                                     <li><Link href='/load-testing/'>Load Testing</Link></li>
-                                    <li><Link href='/software-testing-services/security-testing-services/'>Security Testing </Link></li>
+                                    <li><Link href='/security-testing-services/'>Security Testing </Link></li>
                                     <li><Link href='/Performance Testing/'>Performance Testing</Link></li>
                                 </ul>
                             </div>

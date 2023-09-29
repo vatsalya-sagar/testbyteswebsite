@@ -24,7 +24,7 @@ export default function Header() {
                                 <li className="me-2"><a href="https://www.linkedin.com/company/3115043/" target="_blank" rel="noreferrer" className="fs-6 lh-1"><i className="fab fa-linkedin"></i></a></li>
                                 <li className="me-2"><a href="https://www.instagram.com/testbytes321/" target="_blank" rel="noreferrer" className="fs-6 lh-1"><i className="fab fa-instagram"></i></a></li>
                                 <li className="me-2"><a href="https://www.youtube.com/channel/UCS0vvkVPQgsj7ql9UKpSmGA" target="_blank" rel="noreferrer" className="fs-6 lh-1"><i className="fab fa-youtube"></i></a></li>
-                                <li className="me-2"><a href="#" target="_blank" rel="noreferrer" className="btn btn-primary py-1 px-3 btn-rounded" style={{ color: `#fff` }}>Test Cost Calculator</a></li>
+                                <li className="me-2"><a href="https://mobileappdevelopmentcost.com/Calculator/Domain/?utm_source=MADC_LP&utm_medium=CX_Top_CTA_Btn&utm_campaign=Lead_gen" target="_blank" rel="noreferrer" className="btn btn-primary py-1 px-3 btn-rounded" style={{ color: `#fff` }}>Test Cost Calculator</a></li>
                             </ul>
                         </div>
                     </div>
@@ -78,16 +78,16 @@ export default function Header() {
                                                         <Link href="/mobile-app-testing/" className="fw-bold">Mobile App Testing</Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/mobile-app-testing/android-app-testing/">Android</Link>
+                                                        <Link href="/android-app-testing/">Android</Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/mobile-app-testing/ipad-app-testing/">iPad</Link>
+                                                        <Link href="/ipad-app-testing/">iPad</Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/mobile-app-testing/windows-app-testing/">Windows</Link>
+                                                        <Link href="/windows-app-testing/">Windows</Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/mobile-app-testing/iphone-app-testing/">iPhone</Link>
+                                                        <Link href="/iphone-app-testing/">iPhone</Link>
                                                     </li>
                                                     <li>
                                                         <Link href="/software-testing-services/game-testing/" className="fw-bold">Game Testing</Link>
@@ -121,10 +121,10 @@ export default function Header() {
                                                         <Link href="/web-application-testing-services/" className="fw-bold">Web Application Testing</Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/software-testing-services/security-testing-services/" className="fw-bold">Security Testing</Link>
+                                                        <Link href="/security-testing-services/" className="fw-bold">Security Testing</Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/software-testing-services/penetration-testing-services/">Penetration Testing</Link>
+                                                        <Link href="/penetration-testing-services/">Penetration Testing</Link>
                                                     </li>
                                                     <li>
                                                         <Link href="/vulnerability-scanning-services/">Vulnerability Scanning</Link>
@@ -146,7 +146,7 @@ export default function Header() {
                                             <div className="dropdown-menuservices-cols">
                                                 <ul>
                                                     <li>
-                                                        <Link href="/software-testing-services/performance-testing/" className="fw-bold">Software Performance Testing</Link>
+                                                        <Link href="/performance-testing/" className="fw-bold">Software Performance Testing</Link>
                                                     </li>
                                                     <li>
                                                         <Link href="/load-testing/">Load Testing</Link>
@@ -168,13 +168,13 @@ export default function Header() {
                                             <div className="dropdown-menuservices-cols">
                                                 <ul>
                                                     <li>
-                                                        <Link href="/software-testing-services/functionality-testing/" className="fw-bold">Functionality Testing</Link>
+                                                        <Link href="/functionality-testing/" className="fw-bold">Functionality Testing</Link>
                                                     </li>
                                                     <li>
                                                         <Link href="/unit-testing/">Unit Testing</Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/software-testing-services/integration-testing-services/">Integration Testing</Link>
+                                                        <Link href="/integration-testing-services/">Integration Testing</Link>
                                                     </li>
                                                     <li>
                                                         <Link href="/regression-testing/">Regression Testing</Link>
@@ -202,13 +202,13 @@ export default function Header() {
                                                         <Link href="/browser-compatibility-testing/" className="fw-bold">Browser Compatibility</Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/software-testing-services/usability-testing/">Usability</Link>
+                                                        <Link href="/usability-testing/">Usability</Link>
                                                     </li>
                                                     <li>
                                                         <Link href="/desktop-game-testing/">Desktop Game Testing</Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/software-testing-services/localization-testing/">Localization Testing</Link>
+                                                        <Link href="/localization-testing/">Localization Testing</Link>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -282,7 +282,7 @@ export default function Header() {
                                     </ul>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link hireTesterModalBtn" href="#">Hire Testers</a>
+                                    <Link className="nav-link hireTesterModalBtn" href="/hire-a-tester">Hire Testers</Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link className="nav-link" href="/testing-cost-calculator-app/">Our App</Link>
@@ -334,16 +334,16 @@ export default function Header() {
                                                     <input type="checkbox" className="entlabel" id="entlabel1" />
                                                     <ul>
                                                         <li>
-                                                            <Link href="/mobile-app-testing/android-app-testing/" onClick={sidebarmenuClickChangeClass}>Android</Link>
+                                                            <Link href="/android-app-testing/" onClick={sidebarmenuClickChangeClass}>Android</Link>
                                                         </li>
                                                         <li>
-                                                            <Link href="/mobile-app-testing/ipad-app-testing/" onClick={sidebarmenuClickChangeClass}>iPad</Link>
+                                                            <Link href="/ipad-app-testing/" onClick={sidebarmenuClickChangeClass}>iPad</Link>
                                                         </li>
                                                         <li>
-                                                            <Link href="/mobile-app-testing/windows-app-testing/" onClick={sidebarmenuClickChangeClass}>Windows</Link>
+                                                            <Link href="/windows-app-testing/" onClick={sidebarmenuClickChangeClass}>Windows</Link>
                                                         </li>
                                                         <li>
-                                                            <Link href="/mobile-app-testing/iphone-app-testing/" onClick={sidebarmenuClickChangeClass}>iPhone</Link>
+                                                            <Link href="/iphone-app-testing/" onClick={sidebarmenuClickChangeClass}>iPhone</Link>
                                                         </li>
                                                     </ul>
                                                 </div>

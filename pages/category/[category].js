@@ -19,13 +19,13 @@ export default function CategoryPage({categorypagedata, recentblogsdata}) {
                 <title>{categorypagedata?.data?.category?.name}</title>                
                 <meta name="robots" content="index, follow" />
                 <meta name="description" content={`${categorypagedata?.data?.category.name} `} />
-                <link rel="canonical" href={`https://www.testbytes.net/category/${categorypagedata?.data?.category?.slug}`} />
+                <link rel="canonical" href={`https://www.redbytes.in/category/${categorypagedata?.data?.category?.slug}`} />
                 <meta property="og:locale" content="en_US" />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content={categorypagedata?.data?.category?.name} />
                 <meta property="og:description" content={`${categorypagedata.data.category.name} Mobile App Development Archives`} />
-                <meta property="og:url" content={`https://www.testbytes.net/category/${categorypagedata?.data?.category?.slug}`} />
-                <meta property="og:site_name" content="Testbytes" />
+                <meta property="og:url" content={`https://www.redbytes.in/category/${categorypagedata?.data?.category?.slug}`} />
+                <meta property="og:site_name" content="Redbytes" />
                 <meta name="twitter:card" content="summary" />
             </Head>
 
@@ -61,7 +61,7 @@ export async function getStaticPaths() {
         body: JSON.stringify({
             query: `
             query MyQuery2 {
-              categories(first: 5) {
+              categories {
                 nodes {
                   count
                   name
@@ -78,8 +78,7 @@ export async function getStaticPaths() {
     }));
     return {
         paths,
-        // fallback: 'blocking',
-        fallback: false
+        fallback: 'blocking',
     };
 }
 
@@ -122,7 +121,7 @@ export async function getStaticProps({ params }) {
         body: JSON.stringify({
             query: `
             query MyQuery2 {
-              posts(first: 5) {
+              posts(first: 10) {
                 nodes {
                   date
                   slug

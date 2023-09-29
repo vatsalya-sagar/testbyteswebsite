@@ -13,7 +13,7 @@ export default function BlogLeftSidebar({}) {
       data: {
         query: `
             query NewQuery {
-                categories (first:5) {
+                categories (first:100) {
                   nodes {
                     slug
                     name
@@ -101,13 +101,13 @@ export default function BlogLeftSidebar({}) {
             const filteredCategories = result.filter(
               (item) => item.name === category
             );
-            const highestCountCategory =
-              getCategoryWithHighestCount(filteredCategories);
+            const highestCountCategory = getCategoryWithHighestCount(filteredCategories);
 
             if (highestCountCategory) {
               return (
                 <>
-                  <li key={index + highestCountCategory.slug}>
+                {console.log("highestCountCategory" , highestCountCategory)}
+                  <li key={highestCountCategory.slug}>
                     <Link href={`/category/${highestCountCategory.slug}`}>
                       <img src={categoryImageMap[category]} alt="" />
                       {category}

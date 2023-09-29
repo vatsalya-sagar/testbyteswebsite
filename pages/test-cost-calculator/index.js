@@ -136,9 +136,24 @@
 
 
 import React from 'react'
+import Head from 'next/head'
 
-export default function index() {
+export default function index()
+ {
+  
   return (
-    <iframe src="https://old.testbytes.net/hire-a-tester/" title="description" height="2000" width="100%"></iframe>
+    <>
+   <Head>
+   <title>Test Cost Calculator - Testbytes</title>
+   <meta property="og:url" content="https://www.testbytes.net/" />
+   <meta name="description" content="Test Cost Calculator Testbytes" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Testbytes: Software Testing and QA Consulting Company" />
+    <meta property="og:description" content="Looking for independent software testing services? Testbytes can offer game testing, mobile app testing, security testing, performance testing, and more." />
+    
+
+   </Head>
+      <iframe src="https://old.testbytes.net/test-cost-calculator" title="description" height="2000" width="100%"></iframe>
+    </>
   )
 }
